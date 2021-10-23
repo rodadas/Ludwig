@@ -1,0 +1,329 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://coelho/coelho.tscn" type="PackedScene" id=1]
+[ext_resource path="res://map/scripts/Area.gd" type="Script" id=2]
+[ext_resource path="res://map/map.tscn" type="PackedScene" id=3]
+[ext_resource path="res://map/scripts/Area2.gd" type="Script" id=4]
+[ext_resource path="res://map/scripts/Area3.gd" type="Script" id=5]
+[ext_resource path="res://map/scripts/Area5.gd" type="Script" id=6]
+[ext_resource path="res://map/scripts/Area4.gd" type="Script" id=7]
+[ext_resource path="res://map/scripts/Area6.gd" type="Script" id=8]
+[ext_resource path="res://map/scripts/Area11.gd" type="Script" id=9]
+[ext_resource path="res://map/scripts/Area8.gd" type="Script" id=10]
+[ext_resource path="res://map/scripts/Area10.gd" type="Script" id=11]
+[ext_resource path="res://map/scripts/Area12.gd" type="Script" id=12]
+[ext_resource path="res://map/scripts/Area13.gd" type="Script" id=13]
+[ext_resource path="res://map/scripts/Area7.gd" type="Script" id=14]
+[ext_resource path="res://map/scripts/Area9.gd" type="Script" id=15]
+[ext_resource path="res://map/scripts/Area14.gd" type="Script" id=16]
+[ext_resource path="res://map/scripts/Area15.gd" type="Script" id=17]
+[ext_resource path="res://map/scripts/Area17.gd" type="Script" id=18]
+[ext_resource path="res://map/scripts/Area16.gd" type="Script" id=19]
+[ext_resource path="res://map/scripts/Button.gd" type="Script" id=20]
+[ext_resource path="res://Node2D.gd" type="Script" id=21]
+[ext_resource path="res://coelho/retro_computer_personal_use.ttf" type="DynamicFontData" id=22]
+[ext_resource path="res://coelho/supermerda.wav" type="AudioStream" id=23]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 5, 1, 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 28
+font_data = ExtResource( 22 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 1, 1.66692, 1.29113 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 28
+font_data = ExtResource( 22 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="coelho" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.2863, 11.8468, 41.7882 )
+
+[node name="v5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 9.53631, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.663038, 0.748586, 0, -0.748586, -0.663038, 14.5428, 28.6003, -43.2195 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.31747, 0.948268, 0, -0.948268, -0.31747, 0, 85.8839, -27.5009 )
+spot_range = 121.136
+spot_attenuation = 2.0
+spot_angle = 47.2848
+spot_angle_attenuation = 6.06284
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -18.7734, 0 )
+
+[node name="Area" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8101, 0, 13.2539 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area"]
+shape = SubResource( 1 )
+
+[node name="Area2" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7692, 0, -35.516 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area2"]
+shape = SubResource( 1 )
+
+[node name="Area3" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4745, 0, -5.08728 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area3"]
+shape = SubResource( 1 )
+
+[node name="Area4" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8144, 0, -32.1362 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area4"]
+shape = SubResource( 1 )
+
+[node name="Area5" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98019, 0, -44.891 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area5"]
+shape = SubResource( 1 )
+
+[node name="Area6" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9725, 0, -26.1502 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area6"]
+shape = SubResource( 1 )
+
+[node name="Area7" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94215, 0, 2.35812 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 14 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area7"]
+shape = SubResource( 1 )
+
+[node name="Area8" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3389, 0, 12.4305 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area8"]
+shape = SubResource( 1 )
+
+[node name="Area9" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44.3302, 0, -35.3255 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 15 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area9"]
+shape = SubResource( 1 )
+
+[node name="Area10" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.1254, 0, -2.43857 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 11 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area10"]
+shape = SubResource( 1 )
+
+[node name="Area11" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.5683, 0, 26.4352 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 9 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area11"]
+shape = SubResource( 1 )
+
+[node name="Area12" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4595, 0, 42.8792 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area12"]
+shape = SubResource( 1 )
+
+[node name="Area13" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.145, 0, 25.6948 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area13"]
+shape = SubResource( 1 )
+
+[node name="Area14" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.455379, 0, 35.0674 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 16 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area14"]
+shape = SubResource( 1 )
+
+[node name="Area15" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3714, 0, 25.8623 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 17 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area15"]
+shape = SubResource( 1 )
+
+[node name="Area16" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1383, 0, 44.3731 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area16"]
+shape = SubResource( 1 )
+
+[node name="Area17" type="Area" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.77218, 0, -26.277 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/Area17"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 1027.0
+margin_bottom = 605.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect"]
+margin_left = 456.866
+margin_top = 381.311
+margin_right = 564.866
+margin_bottom = 425.311
+focus_mode = 0
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 0
+text = "dead"
+flat = true
+script = ExtResource( 20 )
+
+[node name="Node2D" type="Node2D" parent="."]
+pause_mode = 2
+visible = false
+script = ExtResource( 21 )
+
+[node name="Button" type="Button" parent="Node2D"]
+margin_left = 307.85
+margin_top = 218.963
+margin_right = 709.85
+margin_bottom = 262.963
+focus_mode = 0
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Stuck? want a tip?"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Node2D"]
+visible = false
+margin_left = 303.395
+margin_top = 294.41
+margin_right = 717.395
+margin_bottom = 332.41
+custom_fonts/font = SubResource( 4 )
+text = "jump over the fence"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+pitch_scale = 1.2
+autoplay = true
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2551, 9.93952, -35.0031 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11433, 0 )
+shape = SubResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 127.116
+margin_top = 195.131
+margin_right = 893.116
+margin_bottom = 397.131
+custom_fonts/font = SubResource( 6 )
+text = "You won! 
+if you enjoyed and want more levels 
+allow me to win this game  jam
+
+Game fully made by Rafael"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="Spatial/Area" to="Spatial/Area" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Spatial/Area2" to="Spatial/Area2" method="_on_Area2_body_entered"]
+[connection signal="body_entered" from="Spatial/Area3" to="Spatial/Area3" method="_on_Area3_body_entered"]
+[connection signal="body_entered" from="Spatial/Area4" to="Spatial/Area4" method="_on_Area4_body_entered"]
+[connection signal="body_entered" from="Spatial/Area5" to="Spatial/Area5" method="_on_Area5_body_entered"]
+[connection signal="body_entered" from="Spatial/Area6" to="Spatial/Area6" method="_on_Area6_body_entered"]
+[connection signal="body_entered" from="Spatial/Area7" to="Spatial/Area7" method="_on_Area7_body_entered"]
+[connection signal="body_entered" from="Spatial/Area8" to="Spatial/Area8" method="_on_Area8_body_entered"]
+[connection signal="body_entered" from="Spatial/Area9" to="Spatial/Area9" method="_on_Area9_body_entered"]
+[connection signal="body_entered" from="Spatial/Area10" to="Spatial/Area10" method="_on_Area10_body_entered"]
+[connection signal="body_entered" from="Spatial/Area11" to="Spatial/Area11" method="_on_Area11_body_entered"]
+[connection signal="body_entered" from="Spatial/Area12" to="Spatial/Area12" method="_on_Area12_body_entered"]
+[connection signal="body_entered" from="Spatial/Area13" to="Spatial/Area13" method="_on_Area13_body_entered"]
+[connection signal="body_entered" from="Spatial/Area14" to="Spatial/Area14" method="_on_Area14_body_entered"]
+[connection signal="body_entered" from="Spatial/Area15" to="Spatial/Area15" method="_on_Area15_body_entered"]
+[connection signal="body_entered" from="Spatial/Area16" to="Spatial/Area16" method="_on_Area16_body_entered"]
+[connection signal="body_entered" from="Spatial/Area17" to="Spatial/Area17" method="_on_Area17_body_entered"]
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_Button_pressed"]
+[connection signal="body_entered" from="Area" to="coelho" method="_on_Area_body_entered"]
